@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import { Card, Icon, Modal} from 'antd';
+import { Card, Modal} from 'antd';
 import Nav from './Nav'
 import {connect} from 'react-redux'
+import { FaThumbsUp } from 'react-icons/fa';
+import { GoBook } from 'react-icons/go';
 
 const { Meta } = Card;
 
@@ -16,7 +18,7 @@ function ScreenArticlesBySource(props) {
 
   useEffect(() => {
     const findArticles = async() => {
-      const data = await fetch(`https://newsapi.org/v2/top-headlines?sources=${props.match.params.id}&apiKey=189771adbd2f40d4a27117edd90ff089`)
+      const data = await fetch(`https://newsapi.org/v2/top-headlines?sources=${props.match.params.id}&apiKey=6c2e75c17c5246bcb46c0debb2071809`)
       const body = await data.json()
       console.log(body)
       setArticleList(body.articles) 
@@ -78,8 +80,8 @@ function ScreenArticlesBySource(props) {
                   />
                   }
                   actions={[
-                      <Icon type="read" key="ellipsis2" onClick={() => showModal(article.title,article.content)} />,
-                      <Icon type="like" key="ellipsis" onClick={()=> {saveArticle(article)}} />
+                      <GoBook type="read" key="ellipsis2" onClick={() => showModal(article.title,article.content)} />,
+                      <FaThumbsUp type="like" key="ellipsis" onClick={()=> {saveArticle(article)}} />
                   ]}
                   >
 

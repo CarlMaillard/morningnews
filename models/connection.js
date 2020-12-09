@@ -2,13 +2,13 @@ var mongoose = require('mongoose');
 
 var options = {
     connectTimeoutMS: 5000,
-    useUnifiedTopology : true,
+    useUnifiedTopology: true,
     useNewUrlParser: true,
 }
 
-mongoose.connect('mongodb+srv://david:hgm4lRQq8QM1p3P8@cluster0-9xbpy.mongodb.net/morningnews?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://carl:carl@cluster0.73m7x.mongodb.net/morningnews?retryWrites=true&w=majority',
     options,
-    function(err){
+    function (err) {
         console.log(err);
     }
 )

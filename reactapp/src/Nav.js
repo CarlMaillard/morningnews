@@ -1,7 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import './App.css';
-import {Menu, Icon} from 'antd'
+import {Menu} from 'antd'
+import { HiOutlineHome } from 'react-icons/hi';
+import { GoBook } from 'react-icons/go';
+import { AiOutlineLogout } from 'react-icons/ai';
+
 
 function Nav() {
 
@@ -11,22 +15,22 @@ function Nav() {
 
         <Menu.Item key="mail">
           <Link to="/screensource">
-            <Icon type="home" />
-            Sources
+            <HiOutlineHome type="home" />
+             Sources
           </Link>
         </Menu.Item>
 
         <Menu.Item key="test">
           <Link to="/screenmyarticles">
-            <Icon type="read" />
-            My Articles
+            <GoBook type="read" />
+             My Articles
           </Link>
         </Menu.Item>
 
         <Menu.Item key="app">
           <Link to="/">
-            <Icon type="logout" />
-            Logout
+            <AiOutlineLogout type="logout" />
+             Logout
           </Link>
         </Menu.Item>
 
